@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #2B474B;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slider__layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    will-change: transform; /* (движение слоев в слайде происходит с помощью свойства transform, сообщаем браузеру на что выделить больше ресурсов(will-change)) */
+}
+
+.slider__item {
+    overflow: hidden;
+    transform: scale(1.25)!important; /* (при перелистывании создаем эффект наезда путем увеличения активного слайда, на изменения проставляем important, чтобы перебить встроенные стили слайдера) */
+    transition: 2s ease!important;
+}
+
+.slider__item:not(.swiper-slide-active) {
+    transform: scale(1)!important;
+}
+
+.slider-ui {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+}
