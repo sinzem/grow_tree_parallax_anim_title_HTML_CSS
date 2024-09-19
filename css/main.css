@@ -1,3 +1,4 @@
+@import "../libs/btn/anim-menu-btn.css";
 @import "../css/grid.css";
 @import "../css/vars.css";
 
@@ -96,7 +97,30 @@ body {
 
 .main-menu li > *::before,
 .main-menu li > *::after {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    background-color: var(--green-color);
+    width: 11.25px;
+    vertical-align: middle;
+    top: -1px;
+    left: -1.5px;
+    position: relative;
+    border-radius: 10em;
+    margin: 0 7.25px;
+    visibility: hidden;
+}
 
+.main-menu li.active > *,
+.main-menu li:hover > * {
+    color: var(--white-color);
+}
+
+.main-menu li.active > *::before,
+.main-menu li:hover > *::before,
+.main-menu li.active > *::after,
+.main-menu li:hover > *::after {
+    visibility: visible;
 }
 
 .button {
@@ -122,4 +146,72 @@ body {
 .button:hover {
     background-color: var(--green-color)
 }
+
+.submenu {
+    --anim-menu-btn-color: var(--gray-color);
+    --anim-menu-btn-gap: .195em;
+    --anim-menu-btn-width: 1.08em;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    flex-direction: column;
+}
+
+.header-contnet__slide {
+    /* position: absolute; */
+}
+
+.header-content__info {
+    top: -18px;
+    position: relative;
+    opacity: 0;
+}
+
+.header-content h1 {
+    font-size: calc(var(--index) * 11.95);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.header-content p {
+    max-width: 560px;
+    font-weight: 600;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+.header-bottom {
+    min-height: 120px;
+}
+
+.letters .letter {
+    text-shadow: 25px 0 35px rgba(0,0,0,.4);
+    position: relative;
+    margin-left: calc(var(--index) * -2.65);
+    right: calc(var(--index) * -2.65);
+    opacity: 0;
+    top: -5px;
+}
+
+
+
+
+
+
+
+
+
+
 
