@@ -15,7 +15,7 @@ document.querySelectorAll(".header-content h1").forEach(e => {
 }) /* (перебираем буквы главного заголовка, оборачиваем каждую в спан и добавляем z-index для эффекта наложения слоев) */
 
 swiper.on('slideChange', () => {
-    document.querySelectorAll(".header-content__slide").forEach((e, i) => {
+    document.querySelectorAll(".header-contnet__slide").forEach((e, i) => {
         return swiper.activeIndex === i ? e.classList.add("active") : e.classList.remove("active");
     })
 })
