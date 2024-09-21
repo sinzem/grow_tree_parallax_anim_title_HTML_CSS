@@ -19,3 +19,4 @@ swiper.on('slideChange', () => {
         return swiper.activeIndex === i ? e.classList.add("active") : e.classList.remove("active");
     })
 })
+
